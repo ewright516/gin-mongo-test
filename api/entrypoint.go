@@ -34,6 +34,7 @@ func init() {
 	data := router.Group("/data")
 
 	auth.POST("/signin", handler.SignIn(client))
+	auth.POST("/signup", handler.SignUp(client))
 
 	data.GET("/post/:id", handler.GetPostById(client))
 }
